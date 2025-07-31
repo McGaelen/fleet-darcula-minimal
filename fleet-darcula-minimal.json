@@ -226,7 +226,8 @@
 
     "editor.caret.background": "dm_caret",
     "editor.caret.border": "dm_caret",
-    "editor.currentLine.background.focused": "Black",
+//    "editor.currentLine.background.default": "",
+    "editor.currentLine.background.focused": "dm_line_highlight",
     "editor.currentLine.scrollbarMark": "Neutral_140",
     "editor.foldedMark.background": "LightTint_11",
     "editor.foldedMark.text": "Neutral_110",
@@ -752,8 +753,8 @@
         }
     },
     "editor.selection": {
-        "foregroundColor": "DarkTint_54",
-        "backgroundColor": "LightTint_26"
+      "foregroundColor": "DarkTint_54",
+      "backgroundColor": "LightTint_26",
     },
     "editor.selection.focused": {
         "foregroundColor": "dm_selection_foreground",
@@ -855,9 +856,13 @@
         }
     },
     "identifier.underCaret": {
-        "foregroundColor": "dm_selection_foreground",
-        "backgroundColor": "dm_annotation",
-        "scrollbarMarkColor": "dm_annotation"
+      "backgroundColor": "dm_annotation",
+      "foregroundColor": "dm_selection_foreground",
+        "scrollbarMarkColor": "dm_annotation",
+//        "border": {
+//          "color": "dm_annotation",
+//          "thickness": 2
+//        }
     },
     "identifier.constant": {
         "foregroundColor": "dm_literal"
@@ -868,12 +873,34 @@
     "identifier.variable": {
         "foregroundColor": "dm_base"
     },
+//    "identifier.variable.mutable": {
+//        "textDecoration": {
+//            "color": "LightTint_26"
+//        }
+//    },
     "identifier.parameter": {
         "foregroundColor": "dm_external_variable"
     },
+//    "identifier.parameter.js": {
+//        "foregroundColor": "Lime"
+//    },
     "identifier.function.declaration": {
-        "foregroundColor": "dm_base"
+        "foregroundColor": "dm_base",
+//        "fontWeight": "SEMI_BOLD"
     },
+//    "identifier.function.declaration.js": {
+//        "foregroundColor": "Yellow",
+//        "fontWeight": "SEMI_BOLD"
+//    },
+//    "identifier.function.call": {
+//        "foregroundColor": "Yellow"
+//    },
+//    "identifier.function.call.package": {
+//        "foregroundColor": "Yellow"
+//    },
+//    "identifier.function.call.composable": {
+//        "foregroundColor": "Lime"
+//    },
     "identifier.method.static": {
         "fontStyle": "ITALIC"
     },
@@ -884,6 +911,7 @@
         "foregroundColor": "dm_base"
     },
     "identifier.field.static": {
+//        "foregroundColor": "Violet",
         "fontStyle": "ITALIC"
     },
     "identifier.interface": {
@@ -905,6 +933,9 @@
     "identifier.typeParameter": {
         "foregroundColor": "dm_type_parameter"
     },
+//    "identifier.namedArgument": {
+//        "foregroundColor": "dm_base"
+//    },
     "identifier.other": {
         "foregroundColor": "dm_base"
     },
@@ -928,6 +959,9 @@
     "tagName.html": {
         "foregroundColor": "dm_class"
     },
+//    "tagName.custom.html": {
+//        "foregroundColor": "Orange"
+//    },
 
     "attributeName.css": {
         "foregroundColor": "dm_base"
@@ -1035,7 +1069,10 @@
     },
 
     "url.css": {
-        "foregroundColor": "dm_literal"
+        "foregroundColor": "dm_literal",
+//        "textDecoration": {
+//            "color": "#546267"
+//        }
     },
 
     "attribute.cpp": {
@@ -1161,15 +1198,22 @@
     },
 
     "problem.error": {
-        "backgroundColor": "dm_error_background",
+      "backgroundColor": "dm_error_background",
         "scrollbarMarkColor": "Red_110",
         "textDecoration": {
             "color": "Red_110",
             "thickness": 2.0
         }
     },
+//    "problem.error.badCharacter": {
+//        "scrollbarMarkColor": "Red_100",
+//        "textDecoration": {
+//            "color": "Red_110",
+//            "thickness": 2.0
+//        }
+//    },
     "problem.warning": {
-        "backgroundColor": "dm_warning_background",
+      "backgroundColor": "dm_warning_background",
         "scrollbarMarkColor": "YellowBright_10",
         "textDecoration": {
             "color": "#FACB66",
@@ -1196,7 +1240,7 @@
     },
     "problem.unknown": {},
     "problem.unused": {
-        "foregroundColor": "#72737A"
+      "foregroundColor": "#72737A"
     },
     "problem.warning.ai": {
         "scrollbarMarkColor": "Violet_90",
@@ -1513,8 +1557,9 @@
     "AccentBackgroundSecondaryDark": "#252629",
     "AccentPopupLight": "#FFFFFF",
     "AccentPopupDark": "#252629",
-    "dm_base": "#ADADAD",
-    "dm_base_background": "#1A1A1A",
+
+    "dm_base": "#adadad",
+    "dm_base_background": "#1a1a1a",
     "dm_error_background": "#571C1B",
     "dm_error_scrollbar_mark": "#9E2927",
     "dm_warning_background": "#473609",
